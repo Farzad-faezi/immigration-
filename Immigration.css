@@ -89,14 +89,14 @@ html, body{
   padding-left: 52px;
 }
 .formorigin{
-  background-color: #3c0685;
+  background-color: rgba(44,0,95,);
   width: 223px;
   border-radius: 10px;
 }
 .formorigin h3{
   text-align: center;
   padding-top: 10px;
-  color: white;
+  color: black;
 }
 .formorigin input{
   display: block;
