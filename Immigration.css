@@ -329,15 +329,15 @@ button:hover{
   color: white;
 }
 .bottomfooter img{
-  width: 50%;
-  height: 34vh;
+  width: 341px;
+  height: 200px;
   border-radius: 10px;
 }
 @media screen and (max-width: 576px){
   .bottomfooter img{
-    width: 63%;
+    width: 200px;
     border-radius: 10px;
-    height: 34vh;
+    height: 157px;
   }
 }
 .information{
