@@ -11,6 +11,48 @@ html, body{
     overflow-x:hidden; 
   scroll-behavior: smooth;
 }
+@media (max-width: 567px) {  
+    .hamburger-btn {
+        display: inline-block; /* تغییر کلیدی: به جای block، از inline-block استفاده می‌کنیم */
+        /* width: 100%; خط بالا را حذف یا کامنت می‌کنیم */
+        
+        padding: 11px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #1d6efd; 
+        color: white;
+        border: none;
+        border-radius: 10px;
+        /* برای اینکه دکمه فقط به اندازه محتوا عرض بگیرد */
+        width: auto; 
+        position: absolute;
+        left: 0;
+        top: 53px;
+        text-align: left;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .formorigin {
+        /* این قسمت از کد فرم باز شده، مانند قبل به صورت شناور باقی می‌ماند */
+        display: none; 
+        position: absolute; 
+        top: 181px; 
+        left: 35%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        z-index: 100;
+        background-color: rgba(44,0,95,);
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    .formorigin.is-open {
+        display: block; 
+        width: auto;
+    }
+}
 .header{
   position: relative;
     background-image: url(images/low-angle-shot-flag-great-britain-pole-cloudy-sky.jpg);
@@ -92,6 +134,7 @@ html, body{
   background-color: rgba(44,0,95,);
   width: 223px;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .formorigin h3{
   text-align: center;
