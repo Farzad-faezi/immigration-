@@ -61,3 +61,22 @@ function stopautoslide() {
 startautoslide();
 document.querySelector(".slider").addEventListener("mouseenter", stopautoslide);
 document.querySelector(".slider").addEventListener("mouseleave", startautoslide);
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('toggle-form-btn');
+    const formContent = document.getElementById('form-content');
+
+    // تابع برای مدیریت نمایش/پنهان‌سازی
+    function toggleForm() {
+        // افزودن یا حذف کردن کلاس is-open 
+        formContent.classList.toggle('is-open');
+
+        // به‌روزرسانی ویژگی aria-expanded برای دسترس‌پذیری
+        const isExpanded = formContent.classList.contains('is-open');
+        toggleBtn.setAttribute('aria-expanded', isExpanded);
+    }
+
+    // بررسی اینکه آیا دکمه و فرم در صفحه وجود دارند و افزودن Event Listener
+    if (toggleBtn && formContent) {
+        toggleBtn.addEventListener('click', toggleForm);
+    }
+});
