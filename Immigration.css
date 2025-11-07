@@ -11,6 +11,9 @@ html, body{
     overflow-x:hidden; 
   scroll-behavior: smooth;
 }
+.hamburger-btn{
+  display: none;
+}
 @media (max-width: 567px) {  
     .hamburger-btn {
         display: inline-block; /* تغییر کلیدی: به جای block، از inline-block استفاده می‌کنیم */
