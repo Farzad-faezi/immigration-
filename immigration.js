@@ -80,3 +80,27 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleBtn.addEventListener('click', toggleForm);
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.getElementById('dropdown-btn');
+    const dropdownContent = document.getElementById('dropdown-content');
+    const dropdownIcon = document.getElementById('dropdown-icon');
+
+    dropdownButton.addEventListener('click', function() {
+        // 1. نمایش یا پنهان کردن لیست (با max-height)
+        dropdownContent.classList.toggle('show'); 
+        
+        // 2. چرخش نرم فلش
+        dropdownIcon.classList.toggle('rotate'); 
+    });
+
+    // 3. بستن دراپ‌داون هنگام کلیک در بیرون آن
+    window.onclick = function(event) {
+        if (!event.target.matches('#dropdown-btn') && !event.target.matches('#dropdown-icon')) {
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+                // برگرداندن آیکون به حالت عادی
+                dropdownIcon.classList.remove('rotate'); 
+            }
+        }
+    };
+});
