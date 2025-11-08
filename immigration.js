@@ -102,5 +102,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 dropdownIcon.classList.remove('rotate'); 
             }
         }
-    };
+    }
 });
