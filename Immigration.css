@@ -120,10 +120,6 @@ html, body{
 .rotate{
   transform: rotate(180dg);
 }
-.dropdown-content.show {
-    display: block; /* این خط باعث نمایش لیست می شود */
-    transition: 0.3s ease-in;
-}
 .dropdown-content a {
   float: none;
   color: black;
