@@ -87,7 +87,7 @@ html, body{
   overflow: hidden;
 }
 .dropdown-content.show {
-    display: block; /* این خط باعث نمایش لیست می شود */
+    max-height: 300px;  /* این خط باعث نمایش لیست می شود */
     transition: 0.3s ease-in;
 }
 .dropdown .dropbtn {
@@ -106,19 +106,20 @@ html, body{
 }
 
 .dropdown-content {
-  display: none;
+  max-height:0;
+  overflow: hidden;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  transition: 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 .dropbtn i{
   transition: transform 0.3s ease;
 }
 .rotate{
-  transform: rotate(180dg);
+  transform: rotate(180deg);
 }
 .dropdown-content a {
   float: none;
